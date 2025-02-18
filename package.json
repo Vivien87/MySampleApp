@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "start": "node index.js",
-    "build": "echo Building application...",
+    "build": "mkdir -p dist && cp index.js package.json dist && echo Building application...",
     "test": "echo Running tests..."
   }
 }

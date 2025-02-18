@@ -9,7 +9,7 @@ pool:
 steps:
 - task: NodeTool@0
   inputs:
-    versionSpec: '16.x' 
+    versionSpec: '16.x'
   displayName: 'Install Node.js'
 
 - script: npm install
@@ -21,5 +21,9 @@ steps:
 - script: npm test
   displayName: 'Run tests'
 
-- script: npm start
-  displayName: 'Run the application'
+- task: PublishBuildArtifacts@1
+  displayName: 'Publish Build Artifacts'
+  inputs:
+    pathToPublish: 'dist'
+    artifactName: 'drop'
+    publishLocation: 'Container'
