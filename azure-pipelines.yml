@@ -4,14 +4,11 @@ trigger:
 pool:
   vmImage: 'ubuntu-latest'
 
-resources:
-  repositories:
-    - repository: self  
-      type: github
-      endpoint: Vivien87 
-      name: Vivien87/MySampleApp
 steps:
 - checkout: self
+
+- script: ls -la $(Build.SourcesDirectory)
+  displayName: 'Checking file in repos'
 
 - task: NodeTool@0
   inputs:
