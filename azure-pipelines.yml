@@ -6,9 +6,14 @@ pool:
   demands:
     - agent.name -equals myAgent
 
+resources:
+  repositories:
+    - repository: self  
+      type: github
+      endpoint: Vivien87 
+      name: Vivien87/MySampleApp
 steps:
 - checkout: self
-  persistCredentials: true
 
 - task: NodeTool@0
   inputs:
