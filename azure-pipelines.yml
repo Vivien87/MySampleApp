@@ -21,8 +21,6 @@ steps:
 - script: npm test
   displayName: 'Run tests'
 
-- script: npm start
-  displayName: 'Run the application'
 
 - task: PublishBuildArtifacts@1
   displayName: 'Publish Build Artifacts'
