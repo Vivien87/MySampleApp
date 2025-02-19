@@ -2,9 +2,7 @@ trigger:
 - main
 
 pool:
-  name: MyLinux
-  demands:
-    - agent.name -equals myAgent
+  vmImage: 'ubuntu-latest'
 
 resources:
   repositories:
